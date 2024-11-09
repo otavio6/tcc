@@ -4,133 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de Resultados</title>
-    <style>
-        body {
-            font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: space-between;
-            height: 100vh;
-            margin: 0;
-            padding: 0 20px;
-        }
-
-        .left-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            padding: 20px;
-            margin-left: 50px;
-            margin-top: 10vh;
-        }
-
-        .title {
-            font-size: 48px;
-            color: #e0e0e0;
-            margin-bottom: 5px;
-        }
-
-        .subtitle {
-            font-size: 24px;
-            color: #333;
-            margin-top: 2vh;
-            margin-bottom: 20px;
-        }
-
-        .form-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-bottom: 100px;
-        }
-
-        .form-group {
-            flex-basis: calc(50% - 38px);
-            margin-top: 50px;
-        }
-
-        .form-group.idade,
-        .form-group.genetica {
-            margin-left: 40px;
-        }
-
-        .form-label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 5px;
-            color: #333;
-        }
-
-        .input-field {
-            background-color: #e2e2e2;
-            border: none;
-            height: 40px;
-            width: 100%;
-            border-radius: 130px;
-            padding-left: 15px;
-            font-size: 16px;
-            transition: background-color 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .input-field:focus {
-            outline: none;
-            box-shadow: 0 0 5px #14AE5C;
-            background-color: #f0f0f0;
-        }
-
-        .submit-button {
-            background-color: #14AE5C;
-            height: 60px;
-            width: 100%;
-            border-radius: 130px;
-            border: solid 1px #0b8845;
-            color: #f7f7f7;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            margin-top: 100px;
-        }
-
-        .submit-button:hover {
-            background-color: #0b8845;
-        }
-
-        .result-container {
-            background-color: #fafafa;
-            height: 100vh;
-            width: 25vw;
-            border-top-left-radius: 50px;
-            border-bottom-left-radius: 50px;
-            box-shadow: -20px 0px 38.2px rgba(0, 0, 0, 0.22);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            color: #333;
-            position: absolute;
-            right: 0;
-            top: 0;
-        }
-
-        .result-title {
-            font-size: 24px;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        .result-box {
-            background-color: #f4f4f4;
-            border-radius: 20px;
-            padding: 20px;
-            width: 80%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -160,15 +34,16 @@
             </div>
         </div>
 
-        <button class="submit-button">GERAR RESULTADO</button>
+        <button class="submit-button" onclick="calculateResult()">GERAR RESULTADO</button>
     </div>
 
     <div class="result-container">
         <div class="result-title">Resultado</div>
-        <div class="result-box">
+        <div class="result-box" id="result">
             <!-- Conteúdo do resultado -->
         </div>
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
